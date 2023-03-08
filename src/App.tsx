@@ -1,10 +1,10 @@
+import { Home } from './Pages/Home/Home'
 import './App.css'
+
 
 function App() {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello Brainflix Team!
-    </h1>
+    <Home/>
   )
 }
 
