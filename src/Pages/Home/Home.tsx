@@ -1,7 +1,8 @@
-import { HomePage } from "../../Components/HomePage/HomePage"
 
 export const Home = () => {
   return (
-    <HomePage/>
+    <main>
+      <h1 className="text-[3rem] font-bold">HomePage</h1>
+    </main>
   )
 }
