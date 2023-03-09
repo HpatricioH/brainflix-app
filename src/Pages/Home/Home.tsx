@@ -1,8 +1,15 @@
+import { VideoPlayer } from "../../Components/VideoPlayer/VideoPlayer"
+import { useFetchVideo } from "../../hooks/useFetchVideo"
+
 
 export const Home = () => {
+  const {videos} = useFetchVideo()
+
+  console.log(videos);
+
   return (
     <main>
-      <h1 className="text-[3rem] font-bold">HomePage</h1>
+      <VideoPlayer/>
     </main>
   )
 }
