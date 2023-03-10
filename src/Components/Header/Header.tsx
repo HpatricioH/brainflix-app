@@ -6,7 +6,7 @@ import { Button } from '../../utils/Button'
 
 export const Header = () => {
   return (
-    <header className='flex flex-col gap-4'>
+    <header className='flex flex-col gap-4 p-[1rem]'>
       <img src={brainflixLogo} alt="brainflix logo" className='h-[1.563rem] w-[7.5rem] self-center'/>
       <div className='relative'>
         <input type="text" placeholder='Search' className='h-[2.5rem] w-full border rounded-[0.25rem] pl-8 bg-[#FAFAFA]'/>
