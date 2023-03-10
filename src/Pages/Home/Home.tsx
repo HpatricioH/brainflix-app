@@ -1,15 +1,24 @@
-import { VideoPlayer } from "../../Components/VideoPlayer/VideoPlayer"
-import { useFetchVideo } from "../../hooks/useFetchVideo"
+// import { VideoPlayer } from "../../Components/VideoPlayer/VideoPlayer"
+import { useParams } from "react-router-dom"
+import  {useSingleVideo}  from "../../hooks/useSingleVideo"
+import { lazy, Suspense } from 'react'
 
+const VideoPlayer = lazy(() =>
+  import('../../Components/VideoPlayer/VideoPlayer')
+    .then(({ VideoPlayer }) => ({ default: VideoPlayer })),
+);
 
 export const Home = () => {
-  const {videos} = useFetchVideo()
+  const {videoId} = useParams<{ videoId: string }>() 
+  const singleVideo = useSingleVideo(videoId as string)
 
-  console.log(videos);
 
   return (
     <main>
-      <VideoPlayer/>
+      <Suspense fallback={<div>Loading...</div>}>
+        <VideoPlayer singleVideo={singleVideo}/>
+      </Suspense>
     </main>
   )
 }
+

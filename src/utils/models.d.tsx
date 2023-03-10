@@ -10,3 +10,7 @@ export type Videos = {
   video: string
   timestamp: string
 }
+
+export type Props = {
+  children: React.ReactNode 
+}
