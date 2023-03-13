@@ -3,8 +3,7 @@ import { Home } from './Pages/Home/Home'
 import { Header } from './Components/Header/Header'
 import './App.css'
 
-
-function App() {
+function App () {
   return (
     <BrowserRouter>
       <Header/>

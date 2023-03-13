@@ -1,16 +1,15 @@
-import { FC, lazy } from "react";
-import { Videos } from "../../utils/models.d";
-import play from '../../assets/icons/play.svg';
-import fullScreen from '../../assets/icons/fullscreen.svg';
-import volumeUp from '../../assets/icons/volume_up.svg';
-import { VideoPlayerButton } from "../../utils/VideoPlayerButton";
+import { FC } from 'react'
+import { Videos } from '../../utils/models.d'
+import play from '../../assets/icons/play.svg'
+import fullScreen from '../../assets/icons/fullscreen.svg'
+import volumeUp from '../../assets/icons/volume_up.svg'
+import { VideoPlayerButton } from '../../utils/VideoPlayerButton'
 
 interface VideoPlayerProps {
   singleVideo: Videos | null
 }
 
 export const VideoPlayer: FC<VideoPlayerProps> = ({ singleVideo }) => {
-
   return (
     <section className="relative">
         <video poster={singleVideo?.image}>
@@ -18,7 +17,7 @@ export const VideoPlayer: FC<VideoPlayerProps> = ({ singleVideo }) => {
         </video>
       <div className="absolute flex w-full bottom-4 justify-center align-baseline gap-2">
         <div className="flex items-center bg-[#000]/[.8] py-[0.2rem] px-[0.8rem] rounded-[0.25rem]">
-          <VideoPlayerButton image={play} alt={"play button"} />
+          <VideoPlayerButton image={play} alt={'play button'} />
         </div>
         <div className="flex items-center bg-[#000]/[.8] py-[0.2rem] px-[0.8rem] rounded-[0.25rem]">
           <progress
@@ -28,8 +27,8 @@ export const VideoPlayer: FC<VideoPlayerProps> = ({ singleVideo }) => {
           </progress>
         </div>
         <div className="flex items-center bg-[#000]/[.8] py-[0.2rem] px-[0.5rem] rounded-[0.25rem] gap-2">
-          <VideoPlayerButton image={fullScreen} alt={"fullscreen button"} />
-          <VideoPlayerButton image={volumeUp} alt={"volume button"} />
+          <VideoPlayerButton image={fullScreen} alt={'fullscreen button'} />
+          <VideoPlayerButton image={volumeUp} alt={'volume button'} />
         </div>
       </div>
     </section>

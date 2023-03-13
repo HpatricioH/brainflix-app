@@ -5,7 +5,7 @@ interface VideoPlayerButtonProps {
 
 export const VideoPlayerButton = ({ image, alt }: VideoPlayerButtonProps) => {
   return (
-    <button type="button">
+    <button type='button'>
       <img src={image} alt={alt} />
     </button>
   )
