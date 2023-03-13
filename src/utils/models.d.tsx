@@ -1,3 +1,5 @@
+import React from 'react'
+
 export type Videos = {
   id: string
   title: string
@@ -12,5 +14,5 @@ export type Videos = {
 }
 
 export type Props = {
-  children: React.ReactNode 
+  children: React.ReactNode
 }

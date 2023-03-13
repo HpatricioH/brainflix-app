@@ -9,10 +9,10 @@ export const useFetchVideo = () => {
     const response = await fetchVideos()
     setVideos(response)
   }, [])
-  
+
   useEffect(() => {
     getVideos()
-   }, [])
+  }, [])
 
-  return {videos}
+  return { videos }
 }
