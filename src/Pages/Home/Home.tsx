@@ -2,6 +2,7 @@
 import { useParams } from 'react-router-dom'
 import { useSingleVideo } from '../../hooks/useSingleVideo'
 import { lazy, Suspense } from 'react'
+import { VideoInformation } from '../../Components/VideoInformation/VideoInformation'
 
 const VideoPlayer = lazy(() =>
   import('../../Components/VideoPlayer/VideoPlayer')
@@ -16,6 +17,7 @@ export const Home = () => {
     <main>
       <Suspense fallback={<div>Loading...</div>}>
         <VideoPlayer singleVideo={singleVideo}/>
+        <VideoInformation singleVideo={singleVideo}/>
       </Suspense>
     </main>
   )
