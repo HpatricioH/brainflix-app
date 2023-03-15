@@ -8,7 +8,6 @@ interface VideoPlayerProps {
 }
 
 export const VideoInformation = ({ singleVideo }:VideoPlayerProps) => {
-  console.log(singleVideo)
   return (
     <section className='px-[1rem]'>
       <h1 className='font-extrabold text-[1.5rem] pt-[1.5rem] pb-[0.5rem]'>{singleVideo?.title}</h1>

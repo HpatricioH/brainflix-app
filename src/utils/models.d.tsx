@@ -16,4 +16,5 @@ export type Videos = {
 
 export type Props = {
   children: React.ReactNode
+  image?: string
 }
