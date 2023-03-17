@@ -13,9 +13,8 @@ export const Header = () => {
         <img src={search} alt="search icon" className="absolute top-3 left-2"/>
       </div>
       <div className='flex gap-5'>
-        <Button>
+        <Button image={upload}>
           Upload
-          <img src={upload} alt="upload icon" className='absolute top-2 left-[0.5rem]'/>
         </Button>
         <img src={userLogo} alt="user logo" className="rounded-[50%] w-[2.25rem] h-[2.25rem] object-cover object-left"/>
       </div>
