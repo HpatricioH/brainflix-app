@@ -11,7 +11,7 @@ export type Videos = {
   duration: string
   video: string
   timestamp: string
-  comments: []
+  comments: [] 
 }
 
 export type Props = {

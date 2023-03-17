@@ -4,6 +4,7 @@ import { useSingleVideo } from '../../hooks/useSingleVideo'
 import { lazy, Suspense } from 'react'
 import { VideoInformation } from '../../Components/VideoInformation/VideoInformation'
 import { AddComment } from '../../Components/AddComment/AddComment'
+import { CommentsCard } from '../../Components/CommentsCard/CommentsCard'
 
 const VideoPlayer = lazy(async () =>
   await import('../../Components/VideoPlayer/VideoPlayer')
@@ -20,6 +21,7 @@ export const Home = () => {
         <VideoPlayer singleVideo={singleVideo}/>
         <VideoInformation singleVideo={singleVideo}/>
         <AddComment/>
+        <CommentsCard singleVideo={singleVideo}/>
       </Suspense>
     </main>
   )
