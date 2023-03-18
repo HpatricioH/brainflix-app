@@ -3,10 +3,10 @@ import userPhoto from '../../assets/images/Mohan-muruge.webp'
 import addCommentIcon from '../../assets/icons/add_comment.svg'
 
 export const AddComment = () => {
-  //TODO: Add functionality to add comment
+  // TODO: Add functionality to add comment
 
   return (
-    <section className='p-[1rem] flex gap-3 border-b border-[#AFAFAF]'>
+    <section className='p-[1rem] flex gap-[0.55rem] border-b border-[#AFAFAF]'>
       <div className='mt-[0.5rem]'>
         <img src={userPhoto} alt="user picture" className='rounded-[50%] w-[2.25rem] h-[2.25rem] object-cover object-left' />
       </div>
