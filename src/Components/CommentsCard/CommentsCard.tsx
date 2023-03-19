@@ -15,7 +15,7 @@ export const CommentsCard = ({ singleVideo }: VideoPlayerProps) => {
      {sortedComments?.map((comment: any) => {
        return (
         <div className='flex gap-4 border-b border-[#AFAFAF] py-[1rem]' key={comment.id}>
-          <div className='bg-[#E1E1E1] rounded-[50%] w-[2.25rem] h-[2.25rem]'></div>
+          <div className='bg-[#E1E1E1] rounded-[50%] w-[2.25rem] h-[2.25rem] p-[1rem]'></div>
           <div className='flex flex-col'>
             <div className='flex justify-between'>
               <h3 className='font-semibold'>{comment.name}</h3>

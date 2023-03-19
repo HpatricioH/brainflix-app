@@ -5,6 +5,7 @@ import { lazy, Suspense } from 'react'
 import { VideoInformation } from '../../Components/VideoInformation/VideoInformation'
 import { AddComment } from '../../Components/AddComment/AddComment'
 import { CommentsCard } from '../../Components/CommentsCard/CommentsCard'
+import { NextVideos } from '../../Components/NextVideos/NextVideos'
 
 const VideoPlayer = lazy(async () =>
   await import('../../Components/VideoPlayer/VideoPlayer')
@@ -12,7 +13,7 @@ const VideoPlayer = lazy(async () =>
 )
 
 export const Home = () => {
-  const { videoId } = useParams<{ videoId: string }>()
+  const { videoId } = useParams<{videoId?: string}>()
   const singleVideo = useSingleVideo(videoId as string)
 
   return (
@@ -22,6 +23,7 @@ export const Home = () => {
         <VideoInformation singleVideo={singleVideo}/>
         <AddComment/>
         <CommentsCard singleVideo={singleVideo}/>
+        <NextVideos videoId={singleVideo?.id}/>
       </Suspense>
     </main>
   )
