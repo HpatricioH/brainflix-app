@@ -16,7 +16,7 @@ export const Header = () => {
         <img src={search} alt="search icon" className="absolute top-3 left-2"/>
       </div>
       <div className='flex gap-5'>
-        <Button image={upload} link={'/upload'}>
+        <Button icon={upload} link={'/upload'}>
           Upload
         </Button>
         <img src={userLogo} alt="user logo" className="rounded-[50%] w-[2.25rem] h-[2.25rem] object-cover object-left"/>

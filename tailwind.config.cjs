@@ -5,7 +5,11 @@ module.exports = {
     './src/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
-    extend: {}
+    extend: {
+      fontFamily: {
+        avenir: ['AvenirNext LT Pro', 'roboto', 'sans-serif']
+      }
+    }
   },
   plugins: []
 }

@@ -9,9 +9,9 @@ function App () {
     <BrowserRouter>
       <Header/>
       <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/upload' element={<Upload/>}/>
-        <Route path='videos/:videoId' element={<Home/>}/>
+        <Route path='/' element={<Home />}/>
+        <Route path='/upload' element={<Upload />}/>
+        <Route path='videos/:videoId' element={<Home />}/>
       </Routes>
     </BrowserRouter>
   )

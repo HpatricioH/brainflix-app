@@ -13,7 +13,7 @@ export const AddComment = () => {
       <form className='flex flex-col w-full gap-3'>
         <label className='text-[#AFAFAF] uppercase font-bold text-[0.85rem] tracking-wide'>joint the conversation</label>
         <textarea placeholder="Add a Comment" className='resize-none rounded-[0.25rem] border-[0.063rem] h-[6rem] p-[0.30rem] focus:outline-none focus:border-[#0065AD]' />
-        <Button image={addCommentIcon}>Comment</Button>
+        <Button icon={addCommentIcon}>Comment</Button>
       </form>
     </section>
   )

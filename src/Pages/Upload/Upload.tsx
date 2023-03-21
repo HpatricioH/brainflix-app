@@ -1,9 +1,8 @@
-import { Header } from "../../Components/Header/Header"
-
+import { UploadVideo } from "../../Components/UploadVideo/UploadVideo"
 export const Upload = () => {
   return (
-    <section>
-      <h1>Upload page</h1>
-    </section>
+    <main>
+      <UploadVideo />
+    </main>
   )
 }
