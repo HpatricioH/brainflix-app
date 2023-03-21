@@ -19,3 +19,7 @@ export interface Props {
   icon?: string
   link?: string
 }
+
+export interface id {
+  videoId: string | undefined
+}

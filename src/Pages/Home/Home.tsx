@@ -21,7 +21,7 @@ export const Home = () => {
       <Suspense fallback={<div>Loading...</div>}>
         <VideoPlayer singleVideo={singleVideo}/>
         <VideoInformation singleVideo={singleVideo}/>
-        <AddComment/>
+        <AddComment videoId={singleVideo?.id}/>
         <CommentsCard singleVideo={singleVideo}/>
         <NextVideos videoId={singleVideo?.id}/>
       </Suspense>
