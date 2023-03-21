@@ -12,7 +12,7 @@ interface VideoPlayerProps {
 export const VideoPlayer: FC<VideoPlayerProps> = ({ singleVideo }) => {
   return (
     <section className="relative">
-        <video poster={singleVideo?.image}>
+        <video poster={singleVideo?.image} className='object-cover aspect-video '>
           <source src={`${singleVideo?.video}`}></source>
         </video>
       <div className="absolute flex w-full bottom-4 justify-center align-baseline gap-2">

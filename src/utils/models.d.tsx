@@ -17,4 +17,5 @@ export interface Videos {
 export interface Props {
   children: React.ReactNode
   image?: string
+  link?: string
 }
