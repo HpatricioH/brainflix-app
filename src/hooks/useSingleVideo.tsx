@@ -12,6 +12,7 @@ export const useSingleVideo = (videoId:string): Videos | null => {
 
     if (!videoId) currentVideo = videos?.[0]?.id
 
+
     const response = await fetch(`${URL}/${currentVideo}`, {
       method: 'GET'
     })
@@ -21,7 +22,7 @@ export const useSingleVideo = (videoId:string): Videos | null => {
 
   useEffect(() => {
     getSingleVideo()
-  }, [getSingleVideo])
+  }, [getSingleVideo, videoId])
 
   return singleVideo
 }

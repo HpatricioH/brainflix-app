@@ -1,6 +1,6 @@
-import React from 'react'
+import type React from 'react'
 
-export type Videos = {
+export interface Videos {
   id: string
   title: string
   channel: string
@@ -11,10 +11,11 @@ export type Videos = {
   duration: string
   video: string
   timestamp: string
-  comments: [] 
+  comments: []
 }
 
-export type Props = {
+export interface Props {
   children: React.ReactNode
-  image?: string
+  icon?: string
+  link?: string
 }
