@@ -14,7 +14,7 @@ const VideoPlayer = lazy(async () =>
 
 export const Home = () => {
   const { videoId } = useParams<{videoId?: string}>()
-  const singleVideo = useSingleVideo(videoId as string)
+  const { singleVideo } = useSingleVideo(videoId as string)
 
   return (
     <main className='body-font font-avenir'>

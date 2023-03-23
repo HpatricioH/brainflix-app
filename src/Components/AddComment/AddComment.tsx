@@ -21,6 +21,8 @@ export const AddComment = ({ videoId }: id) => {
     if (!comment || response.message) {
       setFormValidation(true)
       setMessageError(response.message)
+    } else {
+      setFormValidation(false)
     }
   }
 
