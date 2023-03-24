@@ -11,18 +11,16 @@ export const AddComment = ({ videoId }: id) => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-
+    const form = e.currentTarget
     const { comment } = Object.fromEntries(
       new FormData(e.currentTarget)
     )
-
-    const response = await addComment({ videoId, comment: comment as string })
-
-    if (!comment || response.message) {
-      setFormValidation(true)
-      setMessageError(response.message)
+    if (comment) {
+      await addComment({ videoId, comment: comment as string })
+      form.reset()
     } else {
-      setFormValidation(false)
+      setFormValidation(true)
+      setMessageError('Please fill the comment field')
     }
   }
 

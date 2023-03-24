@@ -16,6 +16,8 @@ export const Home = () => {
   const { videoId } = useParams<{videoId?: string}>()
   const { singleVideo } = useSingleVideo(videoId as string)
 
+  console.log(singleVideo)
+
   return (
     <main className='body-font font-avenir'>
       <Suspense fallback={<div>Loading...</div>}>
