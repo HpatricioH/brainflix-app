@@ -13,7 +13,7 @@ const VideoPlayer = lazy(async () =>
 
 export const Home = () => {
   const { videoId } = useParams<{videoId?: string}>()
-  const { singleVideo, setNewComment } = useFetchVideo(videoId as string)
+  const { singleVideo, setNewComment, setDeleteComment } = useFetchVideo(videoId as string)
 
   return (
     <main className='body-font font-avenir'>
@@ -21,7 +21,7 @@ export const Home = () => {
         <VideoPlayer singleVideo={singleVideo}/>
         <VideoInformation singleVideo={singleVideo}/>
         <AddComment videoId={singleVideo?.id} setNewComment={setNewComment}/>
-        <CommentsCard singleVideo={singleVideo}/>
+        <CommentsCard singleVideo={singleVideo} setDeleteComment={setDeleteComment}/>
         <NextVideos videoId={singleVideo?.id}/>
       </Suspense>
     </main>
