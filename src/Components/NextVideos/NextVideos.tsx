@@ -1,9 +1,6 @@
-import { Link } from "react-router-dom"
-import { useFetchVideo } from "../../hooks/useFetchVideo"
-
-interface id {
-  videoId: string | undefined
-}
+import { Link } from 'react-router-dom'
+import { useFetchVideo } from '../../hooks/useFetchVideo'
+import { id } from '../../utils/models.d'
 
 export const NextVideos = ({ videoId }: id) => {
   const { videos } = useFetchVideo()

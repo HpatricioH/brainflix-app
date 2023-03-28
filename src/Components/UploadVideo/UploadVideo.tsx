@@ -3,7 +3,6 @@ import videoThumbnail from '../../assets/images/upload-image.webp'
 import uploadIcon from '../../assets/icons/upload.svg'
 import { Link } from 'react-router-dom'
 
-
 export const UploadVideo = () => {
   return (
     <section className='px-4 border-t-[0.063rem] body-font font-avenir'>
