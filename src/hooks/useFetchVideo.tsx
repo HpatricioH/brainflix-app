@@ -7,6 +7,7 @@ export const useFetchVideo = (videoId:string) => {
   const [singleVideo, setSingleVideo] = useState<Videos | null>(null)
   const [newComment, setNewComment] = useState(false)
   const [deleteComment, setDeleteComment] = useState(false)
+  const [likedComment, setLikedComment] = useState(false)
   const [loading, setLoading] = useState(false)
 
   const getVideos = useCallback(async () => {
@@ -25,7 +26,8 @@ export const useFetchVideo = (videoId:string) => {
     getVideos()
     setNewComment(false)
     setDeleteComment(false)
-  }, [videoId, newComment, deleteComment])
+    setLikedComment(false)
+  }, [videoId, newComment, deleteComment, likedComment])
 
   // function to get only one video from the array of videos
   const getSingleVideo = useCallback(() => {
@@ -41,5 +43,5 @@ export const useFetchVideo = (videoId:string) => {
     getSingleVideo()
   }, [getSingleVideo, videoId])
 
-  return { videos, singleVideo, setNewComment, setDeleteComment }
+  return { videos, singleVideo, setNewComment, setDeleteComment, setLikedComment }
 }
