@@ -1,4 +1,3 @@
-import { FC } from 'react'
 import { Videos } from '../../utils/models.d'
 import play from '../../assets/icons/play.svg'
 import fullScreen from '../../assets/icons/fullscreen.svg'
@@ -6,10 +5,10 @@ import volumeUp from '../../assets/icons/volume_up.svg'
 import { VideoPlayerButton } from '../../utils/VideoPlayerButton'
 
 interface VideoPlayerProps {
-  singleVideo: Videos | null
+  singleVideo: Videos | null;
 }
 
-export const VideoPlayer: FC<VideoPlayerProps> = ({ singleVideo }) => {
+export const VideoPlayer = ({ singleVideo }:VideoPlayerProps) => {
   return (
     <section className="relative">
         <video poster={singleVideo?.image} className='object-cover aspect-video '>

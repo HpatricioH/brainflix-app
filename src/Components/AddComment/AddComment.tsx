@@ -3,8 +3,9 @@ import userPhoto from '../../assets/images/Mohan-muruge.webp'
 import addCommentIcon from '../../assets/icons/add_comment.svg'
 import { id } from '../../utils/models.d'
 import React, { useState } from 'react'
+import { addComment } from '../../services/addComment'
 
-export const AddComment = ({ videoId, addNewComments }: id | any) => {
+export const AddComment = ({ videoId, setNewComment }: id | any) => {
   const [formValidation, setFormValidation] = useState(false)
   const [messageError, setMessageError] = useState('')
 
@@ -14,8 +15,10 @@ export const AddComment = ({ videoId, addNewComments }: id | any) => {
     const { comment } = Object.fromEntries(
       new FormData(e.currentTarget)
     )
+
     if (comment) {
-      await addNewComments(comment)
+      await addComment({ videoId, comment })
+      setNewComment(true)
       form.reset()
     } else {
       setFormValidation(true)
