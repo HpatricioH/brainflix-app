@@ -44,9 +44,9 @@ export const CommentsCard = ({ singleVideo, setDeleteComment, setLikedComment }:
             </div>
             <p>{comment.comment}</p>
             <div className='flex gap-5 justify-end'>
-              <img src={likeIcon} alt='delete icon' className='w-[1rem] self-end' onClick={() => handleLike(comment.id)}/>
+              <img src={likeIcon} alt='delete icon' className='w-[1rem]' onClick={() => handleLike(comment.id)}/>
               <p>{comment.likes}</p>
-              <img src={deleteIcon} alt='delete icon' className='w-[0.80rem] self-end' onClick={() => handleClick(comment.id)}/>
+              <img src={deleteIcon} alt='delete icon' className='w-[0.80rem]' onClick={() => handleClick(comment.id)}/>
             </div>
           </div>
         </div>
