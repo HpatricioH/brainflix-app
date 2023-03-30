@@ -1,10 +1,7 @@
 import { Link } from 'react-router-dom'
-import { useFetchVideo } from '../../hooks/useFetchVideo'
-import { id } from '../../utils/models.d'
+import { type id } from '../../utils/models.d'
 
-export const NextVideos = ({ videoId }: id) => {
-  const { videos } = useFetchVideo()
-
+export const NextVideos = ({ videoId, videos }: id) => {
   const filterVideo = videos?.filter((video) => video.id !== videoId)
 
   const handleClick = () => {

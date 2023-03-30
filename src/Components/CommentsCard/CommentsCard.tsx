@@ -13,7 +13,7 @@ interface VideoPlayerProps {
 export const CommentsCard = ({ singleVideo, setDeleteComment, setLikedComment }: VideoPlayerProps) => {
   const sortedComments = singleVideo?.comments?.sort((a: any, b: any) => b.timestamp - a.timestamp)
 
-  const handleClick = async (id:string) => {
+  const handleClick = async (id: string) => {
     try {
       await deleteComments({ videoId: singleVideo?.id, commentId: id })
       setDeleteComment(true)
@@ -22,7 +22,7 @@ export const CommentsCard = ({ singleVideo, setDeleteComment, setLikedComment }:
     }
   }
 
-  const handleLike = async (id:string) => {
+  const handleLike = async (id: string) => {
     try {
       await likeComment({ videoId: singleVideo?.id, commentId: id })
       setLikedComment(true)
@@ -44,9 +44,9 @@ export const CommentsCard = ({ singleVideo, setDeleteComment, setLikedComment }:
             </div>
             <p>{comment.comment}</p>
             <div className='flex gap-5 justify-end'>
-              <img src={likeIcon} alt='delete icon' className='w-[1rem]' onClick={() => handleLike(comment.id)}/>
+              <img src={likeIcon} alt='delete icon' className='w-[1rem]' onClick={ () => { void handleLike(comment.id) }}/>
               <p>{comment.likes}</p>
-              <img src={deleteIcon} alt='delete icon' className='w-[0.80rem]' onClick={() => handleClick(comment.id)}/>
+              <img src={deleteIcon} alt='delete icon' className='w-[0.80rem]' onClick={ () => { void handleClick(comment.id) }}/>
             </div>
           </div>
         </div>
