@@ -1,5 +1,5 @@
 import { dateFormatter } from '../../utils/dateFormatter'
-import { Videos } from '../../utils/models.d'
+import { type Videos } from '../../utils/models.d'
 import views from '../../assets/icons/views.svg'
 import likes from '../../assets/icons/likes.svg'
 import { likeVideo } from '../../services/likeVideo'
@@ -9,7 +9,7 @@ interface VideoPlayerProps {
   setLikedVideo: (value: boolean) => void
 }
 
-export const VideoInformation = ({ singleVideo, setLikedVideo }:VideoPlayerProps) => {
+export const VideoInformation = ({ singleVideo, setLikedVideo }: VideoPlayerProps) => {
   const handleLikeVideo = async () => {
     await likeVideo({ videoId: singleVideo?.id })
     setLikedVideo(true)
@@ -25,7 +25,7 @@ export const VideoInformation = ({ singleVideo, setLikedVideo }:VideoPlayerProps
       <div className='flex gap-3 py-[1rem]'>
         <img src={views} alt="views icon" />
         <p>{singleVideo?.views}</p>
-        <img src={likes} alt="likes icon" onClick={handleLikeVideo}/>
+        <img src={likes} alt="likes icon" onClick={() => { void handleLikeVideo() }}/>
         <p>{singleVideo?.likes}</p>
       </div>
       <p className='pb-[1.25rem]'>{singleVideo?.description}</p>

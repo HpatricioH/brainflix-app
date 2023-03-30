@@ -1,8 +1,8 @@
 import { useState, useEffect, useCallback } from 'react'
 import { fetchVideos } from '../services/fetchVideos'
-import { Videos } from '../utils/models.d'
+import { type Videos } from '../utils/models.d'
 
-export const useFetchVideo = (videoId:string) => {
+export const useFetchVideo = (videoId: string) => {
   const [videos, setVideos] = useState<Videos[] | null >(null)
   const [singleVideo, setSingleVideo] = useState<Videos | null>(null)
   const [newComment, setNewComment] = useState(false)
@@ -24,7 +24,7 @@ export const useFetchVideo = (videoId:string) => {
   }, [fetchVideos, videoId, videos])
 
   useEffect(() => {
-    getVideos()
+    void getVideos()
     setNewComment(false)
     setDeleteComment(false)
     setLikedComment(false)

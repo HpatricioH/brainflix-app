@@ -1,7 +1,7 @@
 import { Button } from '../../utils/Button'
 import userPhoto from '../../assets/images/Mohan-muruge.webp'
 import addCommentIcon from '../../assets/icons/add_comment.svg'
-import { id } from '../../utils/models.d'
+import { type id } from '../../utils/models.d'
 import React, { useState } from 'react'
 import { addComment } from '../../services/addComment'
 
@@ -31,7 +31,7 @@ export const AddComment = ({ videoId, setNewComment }: id | any) => {
       <div className='mt-[0.5rem]'>
         <img src={userPhoto} alt='user picture' className='rounded-[50%] w-[2.25rem] h-[2.25rem] object-cover object-left' />
       </div>
-      <form className='flex flex-col w-full gap-3' onSubmit={handleSubmit}>
+      <form className='flex flex-col w-full gap-3' onSubmit={() => handleSubmit}>
         <label className='text-[#AFAFAF] uppercase font-bold text-[0.85rem] tracking-wide'>joint the conversation</label>
         <textarea
           placeholder='Add a Comment'

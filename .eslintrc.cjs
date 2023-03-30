@@ -4,17 +4,22 @@ module.exports = {
     es2021: true
   },
   extends: [
-    'standard'
+    'plugin:react/recommended',
+    'standard-with-typescript'
   ],
-  parser: '@typescript-eslint/parser',
+  overrides: [
+  ],
   parserOptions: {
-    ecmaVersion: 13,
-    sourceType: 'module'
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: './tsconfig.json'
   },
   plugins: [
-    '@typescript-eslint',
     'react'
   ],
   rules: {
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    'react/react-in-jsx-scope': 'off',
+    '@typescript-eslint/strict-boolean-expressions': 'off'
   }
 }

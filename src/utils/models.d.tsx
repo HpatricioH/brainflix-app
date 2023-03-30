@@ -22,4 +22,5 @@ export interface Props {
 
 export interface id {
   videoId: string | undefined
+  videos: Videos[] | undefined | null
 }

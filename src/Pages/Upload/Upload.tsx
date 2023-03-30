@@ -1,4 +1,5 @@
-import { UploadVideo } from "../../Components/UploadVideo/UploadVideo"
+import { UploadVideo } from '../../Components/UploadVideo/UploadVideo'
+
 export const Upload = () => {
   return (
     <main>
